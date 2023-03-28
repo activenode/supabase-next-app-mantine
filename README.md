@@ -22,7 +22,11 @@ The blog
 1. Move the files within `[host_id]` one level up such that you can remove `[host_id]` directory as it will be empty
 1. Set `NEXT_PUBLIC_AFTER_LOGIN_PATH=/m/settings` in your `.env.local`
 
-## How to setup?
+## Why is there a `r_posts` table ?
+
+It's to show you how a table would look like that references a tenant/host to be bound to it in the form of a "blog post belonging to a specific host". Just delete it if you don't want it.
+
+## How to setup:
 
 ### Step 1
 
@@ -49,11 +53,13 @@ Execute the contents of `base.sql` within your SQL Console of Supabase
 
 ### Step 3
 
-Create yourself as a user in your supabase project
+Create yourself as a user (e.g. dave@lovelysmartand.handsome) in your supabase project
 
 ### Step 4
 
 Create a new `host_user` (e.g. in the Supabase UI) by creating a row in `r_host_users` and referencing the existing host and your auth user.
+
+![''](./host_users.png)
 
 ### Step 5
 
